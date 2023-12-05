@@ -1,9 +1,9 @@
 import sys
-from common import sharedValue
-from common import logger
+from ui.UUHWindows import UUHWindows
+from PyQt5.QtWidgets import QApplication
 
-TAG=sys.argv[0].split('.')[0]
-log=logger.Logger(TAG)
-log.debug('sys')
-# def main():
-# main()
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = UUHWindows()
+    window.show()
+    sys.exit(app.exec_())

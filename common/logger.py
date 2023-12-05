@@ -52,18 +52,30 @@ class Logger:
             self.logger.info('/********** START [' + tag + '] **********/')
 
 
-    def info(self, message):
+    def info(self, *args):
         if self.__flag:
+            message=""
+            for arg in args:
+                message = str(message) + str(arg)
             self.logger.info(message)
 
-    def warning(self, message):
+    def warning(self, *args):
         if self.__flag:
+            message=""
+            for arg in args:
+                message = str(message) + str(arg)
             self.logger.warning(message)
 
-    def error(self, message):
+    def error(self, *args):
         if self.__flag:
+            message=""
+            for arg in args:
+                message = str(message) + str(arg)
             self.logger.error(message)
 
-    def debug(self, message):
+    def debug(self, *args):
         if self.__flag:
+            message=""
+            for arg in args:
+                message = str(message) + str(arg)
             self.logger.debug(message)
